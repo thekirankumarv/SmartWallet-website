@@ -5,8 +5,7 @@ import './globals.css';
 const display = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-display', weight: ['500', '700', '800'] });
 const body = Inter({ subsets: ['latin'], variable: '--font-body' });
 
-const host = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const SITE = host ? `https://${host}/` : 'https://thekirankumarv.github.io/SmartWallet-website/';
+const SITE = process.env.VERCEL ? 'https://smartwalletapp.vercel.app/' : 'https://thekirankumarv.github.io/SmartWallet-website/';
 const title = 'SmartWallet: free expense tracker for Android';
 const description =
   'Track every rupee in seconds. Tap, speak or scan a bill. Budgets, accounts, credit cards, loans and reminders, all stored on your phone. Free, no ads, no sign-up.';

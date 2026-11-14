@@ -1,6 +1,6 @@
 # SmartWallet website
 
-**Live:** https://smartwallet-app-lemon.vercel.app
+**Live:** https://smartwalletapp.vercel.app
 
 Landing page for [SmartWallet](https://github.com/thekirankumarv/SmartWallet-releases), a free offline-first money manager for Android.
 

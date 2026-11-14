@@ -3,8 +3,7 @@ import QRCode from 'qrcode';
 import sharp from 'sharp';
 
 const SRC = 'screenshots';
-const host = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const SITE = host ? `https://${host}/` : 'https://thekirankumarv.github.io/SmartWallet-website/';
+const SITE = process.env.VERCEL ? 'https://smartwalletapp.vercel.app/' : 'https://thekirankumarv.github.io/SmartWallet-website/';
 await mkdir('public/shots', { recursive: true });
 
 const pngs = (await readdir(SRC)).filter((f) => /^\d\d-.*\.png$/.test(f));
