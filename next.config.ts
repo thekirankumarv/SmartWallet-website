@@ -1,6 +1,6 @@
 import type { NextConfig } from 'next';
 
-const base = process.env.BASE_PATH ?? '/SmartWallet-website';
+const base = process.env.VERCEL ? '' : '/SmartWallet-website';
 
 export default {
   output: 'export',
