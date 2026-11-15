@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUpRight, BadgeCheck, CloudOff, HardDrive, KeyRound, Loc
 import { asset, FEATURES, GEMINI, INSTALL, REPO, SHOTS } from './data';
 import { AndroidIcon, DownloadButton, Faq, Gallery, HeroVisual, MotionRoot, Nav, Phone, Reveal, ScrollBar, Showcase, Spotlight, Ways } from './ui';
 
-const MARQUEE = ['Free forever', 'No ads', 'No sign-up', 'Works offline', 'Voice entry', 'AI bill scanning', 'Budgets', 'Credit cards', 'Loans & EMIs', 'Reminders', 'Google Drive backup', 'CSV import & export', 'Hide amounts', '₹ Indian number format'];
+const MARQUEE = ['Free forever', 'No ads', 'No sign-up', 'Works offline', 'Voice entry', 'AI bill scanning', 'Budgets', 'Credit cards', 'Loans & EMIs', 'Reminders', 'Google Drive backup', 'PDF statements', 'CSV import & export', 'Hide amounts', '40 currencies', '₹ Indian number format'];
 
 function Head({ kicker, title, sub }: { kicker: string; title: React.ReactNode; sub?: string }) {
   return (
@@ -111,7 +111,7 @@ export default function Home() {
         </section>
 
         <section className="section wrap">
-          <Head kicker="And there’s more" title="Built for how India spends." />
+          <Head kicker="And there’s more" title="Built for how you spend." />
           <div className="bento">
             {FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={(i % 4) * 0.06} className={f.wide ? 'bento-wide' : ''}>
@@ -295,6 +295,7 @@ export default function Home() {
             Report an issue
           </a>
           <a href="#faq">FAQ</a>
+          <a href={`${process.env.NEXT_PUBLIC_BASE}/privacy/`}>Privacy</a>
         </nav>
         <p>Android only · Screenshots use sample data · Made in India</p>
       </footer>

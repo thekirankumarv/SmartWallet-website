@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title,
   description,
   applicationName: 'SmartWallet',
-  keywords: ['expense tracker', 'money manager', 'budget app', 'Android', 'India', 'rupee', 'bill scanner', 'voice expense', 'offline'],
+  keywords: ['expense tracker', 'money manager', 'budget app', 'Android', 'India', 'rupee', 'dollar', 'multi-currency', 'bill scanner', 'voice expense', 'offline'],
   openGraph: { title, description, url: SITE, siteName: 'SmartWallet', type: 'website', images: [{ url: `${SITE}og.png`, width: 1200, height: 630 }] },
   twitter: { card: 'summary_large_image', title, description, images: [`${SITE}og.png`] },
 };
