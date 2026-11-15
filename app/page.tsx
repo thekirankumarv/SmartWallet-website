@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUpRight, BadgeCheck, CloudOff, HardDrive, KeyRound, Loc
 import { asset, FEATURES, GEMINI, INSTALL, REPO, SHOTS } from './data';
 import { AndroidIcon, DownloadButton, Faq, Gallery, HeroVisual, MotionRoot, Nav, Phone, Reveal, ScrollBar, Showcase, Spotlight, Ways } from './ui';
 
-const MARQUEE = ['Free forever', 'No ads', 'No sign-up', 'Works offline', 'Voice entry', 'AI bill scanning', 'Budgets', 'Credit cards', 'Loans & EMIs', 'Reminders', 'Google Drive backup', 'PDF statements', 'CSV import & export', 'Hide amounts', '40 currencies', '₹ Indian number format'];
+const MARQUEE = ['Free forever', 'No ads', 'No sign-up', 'Works offline', 'Ask SmartWallet', 'Bank SMS suggestions', 'App lock', 'Voice entry', 'AI bill scanning', 'Budgets', 'Credit cards', 'Loans & EMIs', 'Reminders', 'Google Drive backup', 'PDF statements', 'CSV import & export', 'Hide amounts', '40 currencies', '₹ Indian number format'];
 
 function Head({ kicker, title, sub }: { kicker: string; title: React.ReactNode; sub?: string }) {
   return (
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="hero-copy">
             <Reveal>
               <span className="pill">
-                <AndroidIcon size={14} /> Now on Android · v1.1
+                <AndroidIcon size={14} /> Now on Android · v1.2
               </span>
             </Reveal>
             <Reveal delay={0.08}>
@@ -44,8 +44,8 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="lead">
-                Tap it, <em>say it</em>, or <em>scan the bill</em>. SmartWallet is a free money manager for Android with budgets, accounts, credit cards, loans and
-                reminders. Everything stays on your phone.
+                Tap it, <em>say it</em>, <em>scan the bill</em>, or let your <em>bank SMS</em> do it. SmartWallet is a free money manager for Android with budgets,
+                accounts, credit cards, loans and reminders, and you can ask it anything. Everything stays on your phone.
               </p>
             </Reveal>
             <Reveal delay={0.24} className="hero-ctas">
@@ -153,9 +153,10 @@ export default function Home() {
               <div className="privacy-list">
                 {[
                   [HardDrive, 'Stored on your phone', 'All your data lives in one file on your phone. No account, no server, no analytics.'],
-                  [Sparkles, 'AI only when you ask', 'Voice clips and bill photos go to Google Gemini only when you use those features. Balances and past transactions never leave.'],
+                  [Sparkles, 'AI only when you ask', 'Voice clips and bill photos go to Google Gemini only when you use those features. Ask SmartWallet answers on your phone. Balances and past transactions never leave.'],
+                  [Lock, 'SMS stay on your phone', 'Bank SMS are read on your phone only, never uploaded or sent to AI. Add App lock to open SmartWallet with your fingerprint.'],
                   [CloudOff, 'Backups go where you choose', 'Save a backup to Google Drive or anywhere else. Restore it on a new phone in seconds.'],
-                  [WifiOff, 'Works offline', 'Everything except voice, bill scanning and update checks works with no internet at all.'],
+                  [WifiOff, 'Works offline', 'Everything except voice, bill scanning and update checks works with no internet at all, including bank SMS suggestions.'],
                 ].map(([Icon, t, b], i) => {
                   const I = Icon as typeof HardDrive;
                   return (
@@ -254,7 +255,7 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal className="updates-phone">
-              <Phone id="27-update" alt="Update available popup" />
+              <Phone id="35-update" alt="Update available popup" />
             </Reveal>
           </div>
         </section>

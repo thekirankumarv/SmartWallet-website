@@ -33,7 +33,7 @@ const bg = Buffer.from(`<svg width="${W}" height="${H}" xmlns="http://www.w3.org
   <rect x="72" y="410" width="330" height="58" rx="29" fill="#8B7CFF"/>
   <text x="237" y="448" text-anchor="middle" font-family="Helvetica, Arial" font-weight="700" font-size="24" fill="#0A0A0F">Free for Android</text>
 </svg>`);
-const [a, b, c] = await Promise.all(['10-stats.png', '01-transactions.png', '08-scan-review.png'].map(phone));
+const [a, b, c] = await Promise.all(['18-stats.png', '01-home.png', '11-scan-review.png'].map(phone));
 await sharp(bg)
   .composite([
     { input: a, left: 600, top: 80 },

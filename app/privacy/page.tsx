@@ -38,6 +38,26 @@ export default function Privacy() {
         names so the entry can be matched. Balances and past transactions are not sent. Google processes that request under its own terms and privacy policy. Nothing is sent if you don’t use these features.
       </p>
 
+      <h2>Ask SmartWallet</h2>
+      <p>
+        Questions you ask the glowing orb are answered on your phone from your own entries. Only if the app can’t understand a question and you have added a Gemini key, the question text is sent to Google
+        Gemini along with your account, category and tag names, so it can work out what you meant. Amounts, balances and transactions are not sent, and the answer is still calculated on your phone.
+      </p>
+
+      <h2>Bank SMS (optional, Android)</h2>
+      <p>
+        If you turn on Suggest from bank SMS, SmartWallet asks for Android’s SMS permission and reads SMS on your phone to find bank, card and UPI payments. It reads only; it never sends SMS. Messages are read on
+        your phone only and are never uploaded, sent to the developer or sent to Gemini. The message text is not stored; the app keeps only which messages you added or skipped and which account number ending
+        belongs to which of your accounts, and neither is included in backups. If you turn on Alert on new bank SMS, the app checks each new SMS on your phone and shows a notification for payments; the lock screen
+        shows no amount. Turn either off in Settings → Privacy, or remove the permission in Android settings.
+      </p>
+
+      <h2>App lock (optional)</h2>
+      <p>
+        App lock uses Android’s own fingerprint, face and screen lock prompt. Your phone does the check and only tells SmartWallet whether it succeeded; the app never sees or stores your fingerprint, face data or
+        PIN.
+      </p>
+
       <h2>Backups</h2>
       <ul>
         <li>

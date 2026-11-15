@@ -8,7 +8,7 @@ import { FAQ, GROUPS, RELEASES, shot, SHOTS, SHOWCASE, WAYS } from './data';
 const ease = [0.22, 1, 0.36, 1] as const;
 
 type Release = { url: string; version: string; size: string };
-const FALLBACK: Release = { url: RELEASES, version: 'v1.1.0', size: '19 MB' };
+const FALLBACK: Release = { url: RELEASES, version: 'v1.2.0', size: '19 MB' };
 let pending: Promise<Release> | undefined;
 
 const loadRelease = () =>
@@ -144,7 +144,7 @@ export function Nav() {
   );
 }
 
-const HERO_CYCLE = ['01-transactions', '04-voice-guide', '15-accounts', '19-reminders'];
+const HERO_CYCLE = ['01-home', '06-ask-answer', '13-bank-sms', '07-voice-guide'];
 
 function Chip({ children, className, x, y, depth, delay }: { children: ReactNode; className: string; x: MotionValue<number>; y: MotionValue<number>; depth: number; delay: number }) {
   const tx = useTransform(x, (v) => v * depth);
@@ -194,10 +194,10 @@ export function HeroVisual() {
       <div className="hero-halo" aria-hidden />
       <motion.div className="hero-stack" style={{ rotateX: rotX, rotateY: rotY }}>
         <motion.div className="hero-side hero-left" initial={{ opacity: 0, x: 60, rotate: 0 }} animate={{ opacity: 1, x: 0, rotate: -9 }} transition={{ delay: 0.35, duration: 1, ease }}>
-          <Phone id="10-stats" alt="Monthly stats screen" priority />
+          <Phone id="18-stats" alt="Monthly stats screen" priority />
         </motion.div>
         <motion.div className="hero-side hero-right" initial={{ opacity: 0, x: -60, rotate: 0 }} animate={{ opacity: 1, x: 0, rotate: 9 }} transition={{ delay: 0.45, duration: 1, ease }}>
-          <Phone id="08-scan-review" alt="Bill scan results screen" priority />
+          <Phone id="11-scan-review" alt="Bill scan results screen" priority />
         </motion.div>
         <motion.div className="hero-main" initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 1, ease }}>
           <div className="phone">
