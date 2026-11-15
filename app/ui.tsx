@@ -8,7 +8,7 @@ import { FAQ, GROUPS, RELEASES, shot, SHOTS, SHOWCASE, WAYS } from './data';
 const ease = [0.22, 1, 0.36, 1] as const;
 
 type Release = { url: string; version: string; size: string };
-const FALLBACK: Release = { url: RELEASES, version: 'v1.0.0', size: '19 MB' };
+const FALLBACK: Release = { url: RELEASES, version: 'v1.1.0', size: '19 MB' };
 let pending: Promise<Release> | undefined;
 
 const loadRelease = () =>

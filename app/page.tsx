@@ -32,7 +32,7 @@ export default function Home() {
           <div className="hero-copy">
             <Reveal>
               <span className="pill">
-                <AndroidIcon size={14} /> Now on Android · v1.0
+                <AndroidIcon size={14} /> Now on Android · v1.1
               </span>
             </Reveal>
             <Reveal delay={0.08}>
